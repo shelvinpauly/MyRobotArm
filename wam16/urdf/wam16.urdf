@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="wam16">
+  <link
+    name="base">
+    <inertial>
+      <origin
+        xyz="-0.0052221 3.4011E-05 0.073607"
+        rpy="0 0 0" />
+      <mass
+        value="20" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="1.0"
+        iyz="0"
+        izz="1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="l1">
+    <inertial>
+      <origin
+        xyz="2.5396E-08 -0.050252 3.0114E-09"
+        rpy="0 0 0" />
+      <mass
+        value="5.3936" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="1.0"
+        iyz="0.0"
+        izz="1.0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.79608 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j1"
+    type="revolute">
+    <origin
+      xyz="0.053536 0 0.31513"
+      rpy="1.5708 0 -1.9984" />
+    <limit
+      lower="-3.1415"
+      upper="3.1415"
+      effort="10"
+      velocity="1000" />
+    <parent
+      link="base" />
+    <child
+      link="l1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l2">
+    <inertial>
+      <origin
+        xyz="7.6483E-07 0.05047 2.3994E-06"
+        rpy="0 0 0" />
+      <mass
+        value="2.8487" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.79608 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j2"
+    type="revolute">
+    <origin
+      xyz="0 0.030866 0"
+      rpy="0.19573 1.5708 0" />
+    <limit
+      lower="-1.5707"
+      upper="1.5707"
+      effort="10"
+      velocity="1000" />
+    <parent
+      link="l1" />
+    <child
+      link="l2" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="l3">
+    <inertial>
+      <origin
+        xyz="9.0662E-06 0.44771 -0.013087"
+        rpy="0 0 0" />
+      <mass
+        value="0.07251" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j3"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="3.1416 -0.50269 3.1416" />
+    <limit
+      lower="-3.1415"
+      upper="3.1415"
+      effort="10"
+      velocity="1000" />
+    <parent
+      link="l2" />
+    <child
+      link="l3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l4">
+    <inertial>
+      <origin
+        xyz="-0.00049544 0.033113 0.039955"
+        rpy="0 0 0" />
+      <mass
+        value="0.0625" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.63922 0.55686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j4"
+    type="revolute">
+    <origin
+      xyz="0 0.549 -0.045"
+      rpy="-0.99221 0 0" />
+    <limit
+      lower="-3.1415"
+      upper="3.1415"
+      effort="10"
+      velocity="1000" />
+    <parent
+      link="l3" />
+    <child
+      link="l4" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="l5">
+    <inertial>
+      <origin
+        xyz="-0.00015626 0.098469 1.1003E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.0275" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.0"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j5"
+    type="fixed">
+    <origin
+      xyz="-0.000504 0.045 0.073"
+      rpy="1.5708 0 -0.075888" />
+    <parent
+      link="l4" />
+    <child
+      link="l5" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="l6">
+    <inertial>
+      <origin
+        xyz="-6.5399E-10 0.066029 -1.8112E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.01067" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.47843 0.4549 0.3451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j6"
+    type="revolute">
+    <origin
+      xyz="0 0.15853 0"
+      rpy="-3.1416 -1.4381 3.1416" />
+    <limit
+      lower="-3.1415"
+      upper="3.1415"
+      effort="10"
+      velocity="1000" />
+    <parent
+      link="l5" />
+    <child
+      link="l6" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l7">
+    <inertial>
+      <origin
+        xyz="-0.001685 0.024237 1.4442E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.009278" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="h7"
+    type="revolute">
+    <origin
+      xyz="0 0.074477 0"
+      rpy="0.15275 0 0" />
+    <limit
+      lower="-3.1415"
+      upper="3.1415"
+      effort="10"
+      velocity="1000" />
+    <parent
+      link="l6" />
+    <child
+      link="l7" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="l8">
+    <inertial>
+      <origin
+        xyz="7.7716E-16 0.071443 -4.4409E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.002557" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.83137 0.84706 0.85882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/l8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j8"
+    type="revolute">
+    <origin
+      xyz="0.00603 -0.014156 0"
+      rpy="0 -0.17166 0" />
+    <limit
+      lower="-3.1415"
+      upper="3.1415"
+      effort="10"
+      velocity="1000" />
+    <parent
+      link="l7" />
+    <child
+      link="l8" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="hl">
+    <inertial>
+      <origin
+        xyz="-2.5543E-05 0.0036866 -0.097192"
+        rpy="0 0 0" />
+      <mass
+        value="0.001" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hj"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 -0.96236 0" />
+    <limit
+      lower="-3.1415"
+      upper="3.1415"
+      effort="10"
+      velocity="1000" />
+    <parent
+      link="l8" />
+    <child
+      link="hl" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="hl11">
+    <inertial>
+      <origin
+        xyz="-0.00074339 0.00064242 -0.030974"
+        rpy="0 0 0" />
+      <mass
+        value="0.005" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hj11"
+    type="revolute">
+    <origin
+      xyz="0 0.05 -0.12751"
+      rpy="-0.5438 0 -3.1416" />
+    <limit
+      lower="-3.1415"
+      upper="3.1415"
+      effort="10"
+      velocity="10" />
+    <parent
+      link="hl" />
+    <child
+      link="hl11" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="hl12">
+    <inertial>
+      <origin
+        xyz="0.0024529 -0.0016711 0.025332"
+        rpy="0 0 0" />
+      <mass
+        value="0.005" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hj12"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.07"
+      rpy="2.846 0 3.1416" />
+    <limit
+      lower="-3.1415"
+      upper="3.1415"
+      effort="10"
+      velocity="10" />
+    <parent
+      link="hl11" />
+    <child
+      link="hl12" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="hl21">
+    <inertial>
+      <origin
+        xyz="9.984E-05 0.063527 -0.028865"
+        rpy="0 0 0" />
+      <mass
+        value="0.005" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl21.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl21.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hj21"
+    type="revolute">
+    <origin
+      xyz="0.025 0 -0.047204"
+      rpy="-1.5708 0 1.1509" />
+    <limit
+      lower="-3.1415"
+      upper="3.1415"
+      effort="10"
+      velocity="10" />
+    <parent
+      link="hl" />
+    <child
+      link="hl21" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="hl22">
+    <inertial>
+      <origin
+        xyz="-0.0012934 0.00064243 -0.030974"
+        rpy="0 0 0" />
+      <mass
+        value="0.005" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl22.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hj22"
+    type="revolute">
+    <origin
+      xyz="0 0.080302 -0.05"
+      rpy="0.49663 0 0" />
+    <limit
+      lower="-3.1415"
+      upper="3.1415"
+      effort="10"
+      velocity="10" />
+    <parent
+      link="hl21" />
+    <child
+      link="hl22" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="hl23">
+    <inertial>
+      <origin
+        xyz="0.0030029 -0.0016711 0.025332"
+        rpy="0 0 0" />
+      <mass
+        value="0.005" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl23.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl23.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hj23"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.07"
+      rpy="3.0676 0 3.1416" />
+    <limit
+      lower="-3.1415"
+      upper="3.1415"
+      effort="10"
+      velocity="10" />
+    <parent
+      link="hl22" />
+    <child
+      link="hl23" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="hl31">
+    <inertial>
+      <origin
+        xyz="9.9837E-05 0.047496 -0.028865"
+        rpy="0 0 0" />
+      <mass
+        value="0.005" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl31.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl31.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hj31"
+    type="revolute">
+    <origin
+      xyz="-0.025 0 -0.063234"
+      rpy="-1.5708 0 -1.2991" />
+    <limit
+      lower="-3.1415"
+      upper="3.1415"
+      effort="10"
+      velocity="10" />
+    <parent
+      link="hl" />
+    <child
+      link="hl31" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="hl32">
+    <inertial>
+      <origin
+        xyz="-0.0012934 0.00064242 -0.030974"
+        rpy="0 0 0" />
+      <mass
+        value="0.005" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl32.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl32.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hj32"
+    type="revolute">
+    <origin
+      xyz="0 0.064271 -0.05"
+      rpy="0.0052796 0 0" />
+    <limit
+      lower="-3.1415"
+      upper="3.1415"
+      effort="10"
+      velocity="10" />
+    <parent
+      link="hl31" />
+    <child
+      link="hl32" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="hl33">
+    <inertial>
+      <origin
+        xyz="0.0030029 -0.0016711 0.025332"
+        rpy="0 0 0" />
+      <mass
+        value="0.005" />
+      <inertia
+        ixx="1.0"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl33.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wam16/meshes/hl33.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hj33"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.07"
+      rpy="-3.0446 0 -3.1416" />
+    <limit
+      lower="-3.1415"
+      upper="3.1415"
+      effort="10"
+      velocity="10" />
+    <parent
+      link="hl32" />
+    <child
+      link="hl33" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="dummy">
+  </link>
+  <joint
+    name="dummy_joint"
+    type="fixed">
+    <parent
+    link="dummy" />
+    <child
+    link="base" />
+  </joint>
+  <transmission name="trans1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j1">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint1">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j2">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint2">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j3">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint3">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j4">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint4">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j6">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint6">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans7">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="h7">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint7">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="trans8">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j8">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint8">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="transhj">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="hj">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="handjoint">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="transhj11">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="hj11">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="handjoint11">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="transhj12">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="hj12">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="handjoint12">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="transhj21">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="hj21">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="handjoint21">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="transhj22">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="hj22">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="handjoint22">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="transhj23">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="hj23">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="handjoint23">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="transhj31">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="hj31">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="handjoint31">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="transhj32">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="hj32">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="handjoint32">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="transhj33">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="hj33">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="handjoint33">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <gazebo>
+		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+			<robotNamespace>wam16</robotNamespace>
+			<robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+			<legacyModeNS>true</legacyModeNS>
+		</plugin>
+	</gazebo>
+</robot>

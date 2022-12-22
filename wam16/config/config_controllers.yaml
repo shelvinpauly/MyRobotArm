@@ -1,0 +1,71 @@
+wam16:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50 
+  j1_control:
+    type: velocity_controllers/JointVelocityController
+    joint: j1
+  j2_control:
+    type: velocity_controllers/JointVelocityController
+    joint: j2
+  j3_control:
+    type: velocity_controllers/JointVelocityController
+    joint: j3
+  j4_control:
+    type: velocity_controllers/JointVelocityController
+    joint: j4  
+  j6_control:
+    type: velocity_controllers/JointVelocityController
+    joint: j6
+  j7_control:
+    type: velocity_controllers/JointVelocityController
+    joint: h7
+  j8_control:
+    type: velocity_controllers/JointVelocityController
+    joint: j8
+  
+  hj_control:
+    type: velocity_controllers/JointVelocityController
+    joint: hj
+  hj11_control:
+    type: velocity_controllers/JointVelocityController
+    joint: hj11
+  hj12_control:
+    type: velocity_controllers/JointVelocityController
+    joint: hj12
+  hj21_control:
+    type: velocity_controllers/JointVelocityController
+    joint: hj21
+  hj22_control:
+    type: velocity_controllers/JointVelocityController
+    joint: hj22
+  hj23_control:
+    type: velocity_controllers/JointVelocityController
+    joint: hj23
+  hj31_control:
+    type: velocity_controllers/JointVelocityController
+    joint: hj31
+  hj32_control:
+    type: velocity_controllers/JointVelocityController
+    joint: hj32
+  hj33_control:
+    type: velocity_controllers/JointVelocityController
+    joint: hj33
+gazebo_ros_control:
+  pid_gains:
+    j1_control: {p: 10.0, i: 100.0, d: 10.0}
+    j2_control: {p: 10.0, i: 100.0, d: 10.0}
+    j3_control: {p: 10.0, i: 100.0, d: 100.0}
+    j4_control: {p: 10.0, i: 100.0, d: 100.0}
+    j6_control: {p: 10.0, i: 100.0, d: 100.0}
+    h7_control: {p: 10.0, i: 100.0, d: 10.0}
+    hj_control: {p: 10.0, i: 100.0, d: 10.0}
+    hj11_control: {p: 100.0, i: 100.0, d: 10.0}
+    hj12_control: {p: 100.0, i: 100.0, d: 10.0}
+    hj21_control: {p: 100.0, i: 100.0, d: 10.0}
+    hj22_control: {p: 100.0, i: 100.0, d: 10.0}
+    hj23_control: {p: 100.0, i: 100.0, d: 10.0}
+    hj31_control: {p: 100.0, i: 100.0, d: 10.0}
+    hj32_control: {p: 100.0, i: 100.0, d: 10.0}
+    hj33_control: {p: 100.0, i: 100.0, d: 10.0}  
+  
