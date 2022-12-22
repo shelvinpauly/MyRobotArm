@@ -27,12 +27,12 @@ rviz
 ```
 
 # To get the interaction environment:
--once the gazebo world is loaded
--click on the ball and place inthe world
--use s to scale and t to translate the spawned item
+- Once the gazebo world is loaded
+- Click on the ball and place inthe world
+- Use 's' to scale and 't' to translate the spawned item
 
 # To run the forward and inverse kinematics:
--open the src folder in the package and run the forward kinematics python file.
--for the inverse file integrate the file in the forward file so that the variables from the other file are easily imported.
--incase you want to run it as a different file make sure the contents of the first file are properly imported.
+- Open the src folder in the package and run the forward kinematics python file.
+- For the inverse file integrate the file in the forward file so that the variables from the other file are easily imported.
+- Incase you want to run it as a different file make sure the contents of the first file are properly imported.
 
