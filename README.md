@@ -1,4 +1,4 @@
-# RDSS Remote Dressing Support System
+# RDSS Remote Assistance
 
 This project involved designing and simulating a robotic system to assist humans. The goal was to develop an autonomous solution to support dressing tasks in healthcare and home settings.
 
